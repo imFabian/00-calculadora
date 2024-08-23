@@ -2,6 +2,8 @@
 
 Esta es una calculadora básica desarrollada con HTML, CSS y JavaScript. Su diseño se inspira en la calculadora de Xiaomi, ofreciendo una interfaz limpia y funcional con opciones para realizar operaciones matemáticas simples. La calculadora incluye un historial de las últimas dos operaciones y un botón de limpieza con comportamiento especial.
 
+![Captura de Pantalla](https://i.postimg.cc/s2jsytp0/calculadora.jpg)
+
 ## Descripción 📋
 
 La calculadora está construida con los siguientes componentes:
