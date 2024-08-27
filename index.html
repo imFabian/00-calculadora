@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="es">
   <head>
+    <!-- Configuración del juego de caracteres a UTF-8 -->
     <meta charset="UTF-8" />
+    <!-- Ajuste para que la página sea responsiva en dispositivos móviles -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Título de la página que aparece en la pestaña del navegador -->
     <title>Calculadora Xiaomi</title>
+    <!-- Enlace al archivo CSS para estilos personalizados -->
     <link rel="stylesheet" href="style.css" />
+    <!-- Enlace a la hoja de estilos de Font Awesome para usar íconos -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
@@ -14,40 +19,58 @@
     />
   </head>
   <body>
+    <!-- Contenedor principal de la calculadora -->
     <div class="calculator">
+      <!-- Sección para mostrar el historial de operaciones -->
       <div class="calculator-history"></div>
 
+      <!-- Pantalla de la calculadora, deshabilitada para solo mostrar valores -->
       <input type="text" class="calculator-screen" value="" disabled />
 
+      <!-- Contenedor para los botones de la calculadora -->
       <div class="calculator-keys">
+        <!-- Botón para limpiar toda la calculadora -->
         <button type="button" class="all-clear" value="all-clear">AC</button>
+        <!-- Botón para eliminar el último dígito ingresado, usando un ícono de backspace -->
         <button type="button" class="operator" value="backspace">
           <i class="fas fa-backspace"></i>
         </button>
+        <!-- Botón para la operación de porcentaje -->
         <button type="button" class="operator" value="%">%</button>
+        <!-- Botón para la operación de división, con símbolo de división -->
         <button type="button" class="operator" value="/">÷</button>
 
+        <!-- Botones numéricos -->
         <button type="button" value="7">7</button>
         <button type="button" value="8">8</button>
         <button type="button" value="9">9</button>
+        <!-- Botón para la operación de multiplicación, con símbolo de multiplicación -->
         <button type="button" class="operator" value="*">×</button>
 
+        <!-- Botones numéricos -->
         <button type="button" value="4">4</button>
         <button type="button" value="5">5</button>
         <button type="button" value="6">6</button>
+        <!-- Botón para la operación de resta, con símbolo de menos -->
         <button type="button" class="operator" value="-">−</button>
 
+        <!-- Botones numéricos -->
         <button type="button" value="1">1</button>
         <button type="button" value="2">2</button>
         <button type="button" value="3">3</button>
+        <!-- Botón para la operación de suma, con símbolo de más -->
         <button type="button" class="operator" value="+">+</button>
 
+        <!-- Botón numérico para el 0, ocupando el espacio de dos columnas -->
         <button type="button" value="0" class="zero">0</button>
+        <!-- Botón para el punto decimal -->
         <button type="button" class="decimal" value=".">.</button>
+        <!-- Botón para calcular el resultado, con símbolo de igual -->
         <button type="button" class="equal-sign operator" value="=">=</button>
       </div>
     </div>
 
+    <!-- Enlace al archivo JavaScript para funcionalidad de la calculadora -->
     <script src="script.js"></script>
   </body>
 </html>

@@ -1,0 +1,147 @@
+/* Estilo para el cuerpo de la página */
+body {
+  display: flex; /* Usar Flexbox para centrar contenido */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center; /* Centrar verticalmente */
+  height: 100vh; /* Altura completa de la ventana */
+  margin: 0; /* Eliminar márgenes por defecto */
+  font-family: "Roboto", sans-serif; /* Fuente Roboto para el texto */
+  background-color: #f0f0f0; /* Fondo gris claro */
+}
+
+/* Estilo para el contenedor principal de la calculadora */
+.calculator {
+  width: 100%; /* Ancho completo */
+  max-width: 400px; /* Ancho máximo de 400px */
+  border-radius: 10px; /* Bordes redondeados */
+  overflow: hidden; /* Ocultar contenido que desborde el contenedor */
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1); /* Sombra suave */
+  background-color: #212121; /* Fondo gris oscuro */
+}
+
+/* Estilo para el historial de la calculadora */
+.calculator-history {
+  height: 42px; /* Altura del historial */
+  font-size: 1.2rem; /* Tamaño de fuente */
+  color: #a9a9a9; /* Color de texto gris */
+  text-align: right; /* Alinear texto a la derecha */
+  padding-right: 20px; /* Espacio a la derecha */
+  overflow: hidden; /* Ocultar texto que desborde */
+  white-space: nowrap; /* No permitir saltos de línea */
+  text-overflow: ellipsis; /* Añadir puntos suspensivos si el texto es muy largo */
+  margin-bottom: 5px; /* Margen inferior */
+  line-height: 1.2; /* Altura de línea ajustada */
+}
+
+/* Estilo para la pantalla de la calculadora */
+.calculator-screen {
+  width: 100%; /* Ancho completo */
+  height: 80px; /* Altura de la pantalla */
+  border: none; /* Sin borde */
+  background-color: #212121; /* Fondo gris oscuro */
+  color: white; /* Texto blanco */
+  text-align: right; /* Alinear texto a la derecha */
+  padding: 10px 20px; /* Espaciado interno */
+  font-size: 2.5rem; /* Tamaño de fuente grande */
+  box-sizing: border-box; /* Incluir padding en el cálculo de ancho/alto */
+}
+
+/* Estilo para el contenedor de las teclas de la calculadora */
+.calculator-keys {
+  display: grid; /* Usar grid para organizar las teclas */
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas de igual tamaño */
+  gap: 10px; /* Espacio entre botones */
+  padding: 10px; /* Padding interno del contenedor */
+  background-color: #333; /* Fondo gris oscuro para las teclas */
+}
+
+/* Estilo general para los botones */
+button {
+  height: 60px; /* Altura de los botones */
+  border-radius: 5px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  background-color: #4d4d4d; /* Fondo gris oscuro para los botones */
+  font-size: 1.5rem; /* Tamaño de fuente */
+  color: white; /* Texto blanco */
+  cursor: pointer; /* Cambiar cursor a pointer al pasar sobre el botón */
+  transition: background-color 0.2s; /* Transición suave del color de fondo */
+}
+
+/* Estilo para los botones al pasar el ratón por encima */
+button:hover {
+  background-color: #6d6d6d; /* Cambiar color de fondo al hacer hover */
+}
+
+/* Estilo específico para los botones de operadores */
+.operator {
+  background-color: #ff9800; /* Fondo naranja */
+}
+
+/* Estilo para los operadores al pasar el ratón por encima */
+.operator:hover {
+  background-color: #fb8c00; /* Fondo naranja más oscuro */
+}
+
+/* Estilo específico para el botón de igual */
+.equal-sign {
+  background-color: #ff5722; /* Fondo rojo anaranjado */
+}
+
+/* Estilo para el botón de igual al pasar el ratón por encima */
+.equal-sign:hover {
+  background-color: #f4511e; /* Fondo rojo anaranjado más oscuro */
+}
+
+/* Estilo específico para el botón de limpiar todo (AC) */
+.all-clear {
+  background-color: #f44336; /* Fondo rojo */
+}
+
+/* Estilo para el botón de limpiar todo (AC) al pasar el ratón por encima */
+.all-clear:hover {
+  background-color: #e53935; /* Fondo rojo más oscuro */
+}
+
+/* Estilo para el botón '0' que ocupa dos columnas */
+.zero {
+  grid-column: span 2; /* Ocupa el espacio de dos columnas */
+}
+
+/* Media queries para ajustar el estilo en dispositivos móviles */
+@media (max-width: 600px) {
+  .calculator-screen {
+    font-size: 2rem; /* Reducir tamaño de fuente en pantalla */
+  }
+
+  button {
+    font-size: 1.2rem; /* Reducir tamaño de fuente en botones */
+    height: 50px; /* Reducir altura de los botones */
+  }
+
+  .calculator-keys {
+    gap: 5px; /* Reducir espacio entre botones */
+    padding: 5px; /* Reducir padding interno */
+  }
+}
+
+@media (max-width: 400px) {
+  .calculator {
+    width: 100%; /* Ancho completo para dispositivos pequeños */
+    max-width: 100%; /* Eliminar ancho máximo */
+  }
+
+  .calculator-screen {
+    font-size: 1.8rem; /* Reducir aún más el tamaño de la fuente en pantalla */
+  }
+
+  button {
+    font-size: 1rem; /* Reducir tamaño de fuente en botones */
+    height: 40px; /* Reducir altura de los botones */
+  }
+
+  .calculator-keys {
+    grid-template-columns: repeat(4, 1fr); /* 4 columnas iguales */
+    gap: 2px; /* Reducir aún más el espacio entre botones */
+    padding: 2px; /* Reducir padding interno */
+  }
+}
